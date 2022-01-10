@@ -52,17 +52,30 @@ console.log("The driver's name goes first.");
 // Bonus 1
 
 
-let lorem = 'Lorem ipsum dolor sit amet, eu tollit consulatu sed, sea sanctus instructior an. Eam maiestatis mnesarchum eu. Sensibus splendide mel ei, at sit error appellantur. Insolens partiendo pro ut.Tractatos efficiendi quo no, nullam tibique pertinacia at sed. Cum vidit patrioque ex, graeci expetendis cum ea, ut debet lobortis vim. Pri aliquip similique definiebas ad. Ex labores euripidis ullamcorper sed. Quas animal duo et. Viris antiopam assueverit his an, sit nonumy audiam eu, melius vidisse persius ex eam. Delicata partiendo usu ex. Id cum dicunt percipitur referrentur, vel ignota nostro utroque ut. Has ei adhuc singulis dissentiet. Graeci semper id pro.';
+let lorem = `Lorem ipsum dolor sit amet, eu tollit consulatu sed, sea sanctus instructior an. Eam maiestatis mnesarchum eu. Sensibus splendide mel ei, at sit error appellantur. Insolens partiendo pro ut.Tractatos efficiendi quo no, nullam tibique pertinacia at sed. Cum vidit patrioque ex, graeci expetendis cum ea, ut debet lobortis vim. 
+Pri aliquip similique definiebas ad. Ex labores euripidis ullamcorper sed. Quas animal duo et. Viris antiopam assueverit his an, sit nonumy audiam eu, melius vidisse persius ex eam. Delicata partiendo usu ex. 
+Id cum dicunt percipitur referrentur, et vel ignota nostro utroque ut. Has ei adhuc singulis dissentiet. Graeci semper id pro.`;
+const arrTeste =[];
 
-console.log (`Number of words is ${lorem.length}`);
+
+for(i=0;i<lorem.length;i++){
+    arrTeste.push(lorem[i])
+}
+let cont2=1;
+for(i=0;i<arrTeste.length;i++){
+  if(arrTeste[i]===' '){
+    cont2++;
+  }
+}
+console.log (`Number of words is ${cont2}`);
 
 let cont =0;
-for(i=0;i<lorem.length;i++){
-    if(lorem[i]=='et'){
+for(i=0;i<arrTeste.length;i++){
+    if(arrTeste[i]===' ' && arrTeste[i+1]==='e' && arrTeste[i+2]==='t' || arrTeste[i]===' ' && arrTeste[i+1]==='e' && arrTeste[i+2]==='t'&& arrTeste[i+3]===' '){
         cont++;
     }
 }
-console.log(`The number of Latin word et is ${cont}`);
+console.log(`The number of Latin word 'et' is ${cont}`);
 
 
 //bonus 2
